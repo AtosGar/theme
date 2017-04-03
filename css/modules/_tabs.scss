@@ -1,0 +1,54 @@
+.tabs {
+    text-align: center;
+    >* {
+        text-align: initial;
+    }
+    header {
+        color: $text-light;
+        font-size: 14px;
+        font-weight: bold;
+        text-transform: uppercase;
+        background: transparent;
+        margin-right: 10px;
+        @include run-transition(border-bottom);
+        &:hover {
+            border-bottom: 2px solid lighten($primary, 20%);
+        }
+    }
+    header.selected {
+        border: none;
+        border-bottom: 2px solid $primary;
+        color: $primary;
+    }
+}
+
+.tabs.heading-tabs {
+    background: $white;
+    @include material-card;
+
+    header {
+        //width: 100%; tabs centered in whole space
+        width: auto;
+        border-bottom: 2px solid $white;
+        @include run-transition(all);
+        &:hover{
+            border-bottom: 2px solid $accent;
+            a, a i{
+                color: $accent;
+            }
+        }
+        a{
+            i{
+                color: $primary;
+                @include run-transition(all);
+            }
+        }
+    }
+    header.selected{
+        background: $white;
+        border-bottom: 2px solid $accent;
+        a, a i{
+            color: $accent;
+        }
+    }
+}

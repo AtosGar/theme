@@ -1,0 +1,39 @@
+@import url(https://fonts.googleapis.com/css?family=Roboto:500,300,700,400);
+
+@font-face {
+	font-family: "OpenDyslexic";
+	src: url(../../../entcore-css-lib/font/OpenDyslexic3-Regular.ttf);
+}
+
+
+title{
+	display: block;
+}
+
+html, body{
+	background: $background;
+	font-family: Roboto;
+}
+
+body {
+	overflow-x: hidden;
+	font-size: 16px;
+	line-height: 23px;
+
+	section.main{
+		background: transparent;
+	}
+	.material{
+		section.main{
+			position: relative;
+			top: $header-height + 10px;
+			box-sizing: border-box;
+			padding: 8px 35px;
+			padding-bottom: 60px;
+		}
+	}
+}
+
+button, input[type=button], a.button, input[type=submit], .drop-down-button label, .drop-down-button.hidden label {
+	font-family: Roboto;
+}

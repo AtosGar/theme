@@ -1,0 +1,123 @@
+.dominos {
+    .item {
+        width: 14%;
+        border: 0;
+        padding: 14px;
+        margin: 1px;
+        display: inline-block;
+        .domino {
+            @include material-card(2px, 3px);
+            border-radius: 3px;
+            border: 0;
+            .bottom {
+                text-align: left;
+                background: white;
+                color: $primary;
+                div.content {
+                    padding: 8px;
+                    i.shared{
+                        right: 8px;
+                        top: 8px;
+                    }
+                    .icons{
+                        position: absolute;
+                        bottom: 8px;
+                        right: 8px;
+                        .inline{
+                            position: relative;
+                            display: inline-block;
+                            left: 0;
+                            right: 0;
+                            top: 0;
+                        }
+                    }
+                }
+                i.send-mail:hover {
+                    margin: 7px;
+                }
+            }
+        }
+    }
+}
+
+.dominos.centered-text{
+    .item{
+        padding: 0px;
+        margin: 8px;
+        max-width: 140px;
+        min-width: 100px;
+        .domino{
+            .top{
+                & + span{
+                    color: $white;
+                }
+                img{
+                    background: $white;
+                }
+            }
+            .bottom{
+                margin-top: 0;
+            }
+        }
+    }
+    .mood{
+        top: 5px;
+        i.liquid{
+            font-size: 20px;
+            line-height: normal;
+            &::before{
+                @include text-border ;
+            }
+        }
+        i.liquid.default{
+            display: none;
+            // font-size: 15px;
+            // display: block;
+            // &::before{
+            //     color: $medium-grey ;
+            // }
+        }
+    }
+    .bottom-locked{
+        right: 0;
+    }
+}
+
+
+.dominos.fallen {
+    .item {
+        font-size: 12px;
+        line-height: 21px;
+        min-width: 295px;
+        width: 25%;
+        float: left;
+        strong {
+            font-size: 16px;
+        }
+    }
+    .two-lines {
+        max-height: 42px;
+        overflow: hidden;
+    }
+}
+
+.dominos alphabetical .item {
+    max-width: 230px;
+    width: 20%;
+    .domino {
+        border-radius: 0;
+        padding: 0;
+        img {
+            background-color: $primary;
+        }
+        .bottom {
+            margin: 0;
+            div.content {
+                padding: 0;
+            }
+        }
+    }
+    .domino:hover {
+        box-shadow: 0 2px 6px $shadow-darker;
+    }
+}
